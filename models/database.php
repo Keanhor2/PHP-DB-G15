@@ -1,4 +1,4 @@
 <?php
-/**
- * Your code here 
- */
+// database connection
+$database = new PDO('mysql:host=localhost;dbname=facebook','root','');
+

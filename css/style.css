@@ -1,0 +1,136 @@
+.navbar{
+    background-color:#0074FC;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 7vh;
+}
+.navbar_left{
+    width: 10%;
+}
+.navbar_mid{
+    width: 60%;
+}
+.navbar_right{
+    width: 30%;
+}
+.navbar_left, .navbar_mid,.navbar_right{
+    list-style: none;
+}
+
+.navbar_left li a,.navbar_mid li a,.navbar_right li a{
+    color: white;
+    text-decoration: none;
+}
+.navbar_left .fb_logo{
+    font-size: 1.7em;
+}
+.search_form{
+    width: 80%;
+    height: 4.5vh;
+}
+.input_search{
+    width: 95%;
+    height: 4.5vh;
+}
+.input_button{
+    border: 1px solid white ;
+    height: 4vh;
+}
+.navbar_mid .navbar_friend ,.navbar_mid .navbar_notification {
+    padding-right: 5vh;
+}
+.navbar_right li a{
+    color: white ;
+    margin-left: 80%;
+}
+
+/* Index of container */
+/* Session1 */
+.container_index .section1{
+    width: 30%;
+}
+/* Session2 */
+.container_index .section2{
+    width: 70%;
+    border: 1px solid blue;
+}
+/* cover of profile */
+.cover_pro_size{
+    width: 100%;
+}
+.change_cover{
+    position: absolute;
+    margin-left: 60%;
+    margin-top: -2%;
+    color: white;
+    background:rgba(255, 255, 255, 0.308);
+}
+/* profile information */
+.profile_info{
+    height: 10vh;
+    display: flex;
+}
+.profile_logo{
+    width: 40%;
+}
+.profile_logo_size{
+    border: 3px solid white;
+    width: 20%;
+    position: absolute;
+    margin-top: -10%;
+}
+/* Change profile image */
+.change_profile{
+    position: absolute;
+    color: white;
+    margin-left: 11%;
+    margin-top: 2vh;
+    background:rgba(255, 255, 255, 0.308);
+}
+/* navbar below the cover profile */
+.more_info{
+    width: 60%;
+}
+.more_info ul{
+    display: flex;
+    list-style: none;
+}
+.more_info ul li{
+    margin: 5%;
+    margin-top: 2.5%;
+
+}
+.more_info ul li a{
+    text-decoration: none;
+}
+/* To post on facebook */
+.profile_body{
+    /* border: 5px solid purple; */
+}
+.to_post{
+    /* border: 5px solid yellow; */
+}
+/* Form to post */
+.form_post{
+    /* border: 5px solid hotpink ; */
+    padding: 1% 2%;
+    border: 1px solid blue;
+}
+.post_title{
+    text-align:center;
+}
+.post_content{
+    width: 100%;
+    margin: 1.5% 0%;
+}
+/* button to post  */
+.button_post{
+    margin-left: 90%;
+    background-color:#0074FC;
+    border-radius:1.5vh;
+    width: 10%;
+}
+.button_post:hover{
+    background:#0076fcbd;
+}
