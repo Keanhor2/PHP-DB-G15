@@ -44,7 +44,7 @@ require_once "templates/footer.php";
            </div>
         </div>
         <?php 
-            require_once "views/post_form.php";
+            require_once "views/create_view.php";
         ?>
     </section>
 </div>
