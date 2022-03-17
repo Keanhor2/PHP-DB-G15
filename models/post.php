@@ -21,7 +21,7 @@ function get_posts()
 function get_posts_ById($post_id)
 {
     global $database;
-    $statment = $database->prepare("SELECT *FROM posts where post_id = :post_id");
+    $statment = $database->prepare("SELECT * FROM posts where post_id = :post_id" );
     $statment->execute([
         ':post_id' => $post_id,
     ]);
