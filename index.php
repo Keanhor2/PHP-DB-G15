@@ -1,6 +1,6 @@
 <?php
 require_once "templates/header.php";
-require_once "templates/footer.php";
+
 
 ?>
 <nav class="navbar">
@@ -48,3 +48,5 @@ require_once "templates/footer.php";
         ?>
     </section>
 </div>
+
+<?php require_once "templates/footer.php";?>

@@ -67,15 +67,14 @@ function update_posts($post_id, $post_content, $post_date)
  
  * @return true if create was successful, false otherwise
  */
-function create_posts($post_content, $post_image)
+function create_posts($post_content, $post_image,$user_id)
 {
     global $database;
-    $post_content = $_POST['post_content'];
-    $post_image = $_POST['post_image'];
-    $statment =$database->prepare("INSERT INTO posts(post_content,post_image) VALUE(:post_content,:post_image)");
+    $statment =$database->prepare("INSERT INTO posts(post_content,post_image,user_id) VALUE(:post_content,:post_image,:user_id)");
     $statment->execute([
         ':post_content'=>$post_content,
         ':post_image'=>$post_image,
+        ':user_id'=>$user_id
     ]);
     return $statment->rowCount() >0 ;
 }
