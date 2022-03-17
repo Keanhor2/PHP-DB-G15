@@ -4,6 +4,7 @@
     padding: 0;
     display: flex;
     height: 7vh;
+    
 }
 .navbar_left{
     width: 10%;
@@ -88,6 +89,7 @@
     margin-top: 2vh;
     background:rgba(255, 255, 255, 0.308);
 }
+
 /* navbar below the cover profile */
 .more_info{
     width: 60%;
@@ -105,12 +107,7 @@
     text-decoration: none;
 }
 /* To post on facebook */
-.profile_body{
-    /* border: 5px solid purple; */
-}
-.to_post{
-    /* border: 5px solid yellow; */
-}
+
 /* Form to post */
 .form_post{
     /* border: 5px solid hotpink ; */

@@ -7,14 +7,14 @@
         $folder = "../images/".$post_image;
         // echo $folder;
         move_uploaded_file($_FILES['image']['tmp_name'],$folder);
-        $isCreated = create_posts( $post_content,$post_image,1);
-       // check condition 
-        if($isCreated>0){
-            header('location:../index.php');
-        }else{
-            header('location:../views/create_view.php');
+        if(!empty($post_content) or !empty($post_image)){
+            $isCreated = create_posts( $post_content,$post_image,1);
+        // check condition 
+            if($isCreated>0){
+                header('location:../index.php');
+            }else{
+                header('location:../views/create_view.php');
+            }
         }
     }
-    
-
 ?>

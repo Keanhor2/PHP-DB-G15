@@ -58,9 +58,9 @@ function delete_posts($post_id)
 function update_posts($post_id, $post_content, $post_image)
 {
     global $database;
-    $statment = $database->prepare("UPDATE posts SET  post_content = :post_content, post_image = :post_image where post_id = :id");
+    $statment = $database->prepare("UPDATE posts SET  post_content = :post_content, post_image = :post_image where post_id = :post_id");
     $statment->execute([
-        ':id'=> $post_id,
+        ':post_id'=> $post_id,
         ':post_content'=>$post_content,
         ':post_image'=>$post_image,
     ]);
