@@ -16,22 +16,21 @@
                     <?php
                         require_once "models/post.php";
                         $posts = get_posts();
-                        // print_r($posts);
                         foreach ($posts as $post):
                     ?>
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><?= $post['post_content'] ?></p>
-                            <div class="d-flex justify-content-end 	">
-                                <a href=""><i class="fas fa-pencil-alt fas me-2"></i></a>
-                                <a href="controllers/delete_post.php?id=<?= $post['post_id'] ?>"> <i class="fa fa-trash"></i></a>
+                            <p class="card-text"><?= $post['post_content'] ?></p> <hr class=" line w-75 h-5">
+                            <div class=" d-flex justify-content-end ">
+                                <a href="views/edit_view.php?id=<?php echo $post['post_id']?>"><i class="	fas fa-pencil-alt 	fas me-2"></i></a>
+                                <a href="controllers/delete_post.php?id=<?php echo $post['post_id']?>"> <i class="fa fa-trash"></i></a>
                             </div>
                             <div class="image_post d-flex justify-content-center">
-                                <img class="" src="images/<?= $post['post_image']?>" alt="" width="400">
+                                <img src="images/<?= $post['post_image']?>" alt="" width="400">
                             </div>
                             <div class="number_like d-flex justify-content-around">
                                 <p>2k like</p>
-                                <p>15 comment</p>
+                                <p>515 comment</p>
                             </div> <hr>
                             
                         </div>

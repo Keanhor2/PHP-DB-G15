@@ -14,7 +14,6 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
-    
 <nav class="navbar">
     <ul class="navbar_left">
     <li ><a class="fb_logo fab fa-facebook" href=""></a></li>

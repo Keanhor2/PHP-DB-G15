@@ -21,11 +21,17 @@ function get_posts()
 function get_posts_ById($post_id)
 {
     global $database;
-    $statment = $database->prepare("SELECT * FROM posts where post_id = :post_id" );
+ 
+    $statment = $database->prepare("SELECT *FROM posts where post_id = :post_id");
     $statment->execute([
         ':post_id' => $post_id,
     ]);
-    return $statment->fetch();
+
+    $result = $statment->fetch(); 
+
+    // print_r($result);
+
+    return $result;
 }
 
 /**
@@ -49,14 +55,14 @@ function delete_posts($post_id)
  
  * @return true if deletion was successful, false otherwise
  */
-function update_posts($post_id, $post_content, $post_date)
+function update_posts($post_id, $post_content, $post_image)
 {
     global $database;
-    $statment = $database->prepare("UPDATE posts SET  post_content = :post_content, post_image = :post_image,post_date=:post_date where post_id = :post_id");
+    $statment = $database->prepare("UPDATE posts SET  post_content = :post_content, post_image = :post_image where post_id = :post_id");
     $statment->execute([
         ':post_id'=> $post_id,
         ':post_content'=>$post_content,
-        ':post_date'=>$post_date,
+        ':post_image'=>$post_image,
     ]);
 }
 
