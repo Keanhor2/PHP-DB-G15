@@ -131,10 +131,4 @@
 .button_post:hover{
     background:#0076fcbd;
 }
-.image-upload>input {
-    display: none;
-  }
-  
-.file-input img{
-    width: 20px;
-}
+

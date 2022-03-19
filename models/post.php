@@ -84,4 +84,27 @@ function create_posts($post_content, $post_image,$user_id)
     ]);
     return $statment->rowCount() >0 ;
 }
+
+
+
+// insert image of profile
+function change_profile($user_profile){
+    global $database;
+    echo $user_profile;
+    $statment =$database->prepare("UPDATE  users SET  user_profile=:user_profile WHERE user_id= :id ");
+    $statment->execute([
+        ':user_profile'=>$user_profile,
+        ':id'=>1
+    ]);
+}
+
+// GET image of profile
+function get_user_profile()
+{
+    global $database;
+    $statment = $database->prepare("SELECT *FROM users");
+    $statment->execute();
+    return $statment->fetch();
+}
 ?>
+

@@ -1,9 +1,10 @@
 <div class="profile_body">
             <div class="to_post">
-                <form action="../controllers/create_post.php" method="post" class="form_post" enctype="multipart/form-data">
+                <form action="controllers/create_post.php" method="post" class="form_post" enctype="multipart/form-data">
                     <div class="post_title">Do you want to post something?</div>
-                    <div>
-                        <input type="text"name="post_content"class="post_content" placeholder="content...">
+                    <div class="d-flex align-items-center " >
+                        <img src="user_profile/<?=$user_profile["user_profile"]?>" alt="" width="35" height="35" class=" rounded-circle me-2">
+                        <input type="text"name="post_content"class="post_content" placeholder="content..."  >
                     </div>
                     <div>
                         <input  type="file" name="image" >
@@ -13,6 +14,9 @@
                     </div>
                 </form>
                 <div class="container" mt-3>
+                    <?php  
+                         
+                     ?>
                     <?php
                         require_once "models/post.php";
                         $posts = get_posts();
@@ -20,7 +24,11 @@
                     ?>
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><?= $post['post_content'] ?></p> <hr class=" line w-75 h-5">
+                            <div class=" d-flex align-items-center ">
+                                <img src="user_profile/<?=$user_profile["user_profile"]?>" alt="" width="60" height="60" class=" rounded-circle" >
+                                <p  class="ms-2"> <?=$user_profile["user_first_name"].' '.$user_profile["user_last_name"]?> </p>
+                            </div>
+                            <p class="card-text"><?= $post['post_content'] ?></p> 
                             <div class=" d-flex justify-content-end ">
                                 <a href="views/edit_view.php?id=<?php echo $post['post_id']?>"><i class="	fas fa-pencil-alt 	fas me-2"></i></a>
                                 <a href="controllers/delete_post.php?id=<?php echo $post['post_id']?>"> <i class="fa fa-trash"></i></a>
