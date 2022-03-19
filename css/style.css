@@ -47,6 +47,13 @@
 }
 
 /* Index of container */
+
+/* card body */
+.card-body{
+    border: 1px solid ;
+    border-radius: 1%;
+    margin-bottom: 15px;
+}
 /* Session1 */
 .container_index .section1{
     width: 30%;
@@ -142,3 +149,4 @@
     /* margin-left: 85%; */
     border-style: none;
 }
+

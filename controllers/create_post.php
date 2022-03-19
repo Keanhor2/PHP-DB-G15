@@ -16,5 +16,8 @@
                 header('location:../views/create_view.php');
             }
         }
+        else{
+            header('location:../index.php');
+        }
     }
 ?>
