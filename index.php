@@ -25,9 +25,9 @@ require_once "templates/header.php";
                     <form action="controllers/update_profile.php" method="post" enctype="multipart/form-data">
                         <div class="change_profile">
                         <label>
-                            <i class="fa fa-camera fs-3 text-primary "></i>
+                            <i class="fa fa-camera fs-5 text-primary ms-5"></i>
                             <input  type="file" name="profile" style="display:none" >
-                            <button type="submit" class="btn btn-white"><i class="fa fa-save fs-3 ms-4"></i></button>
+                            <button type="submit" class="btn btn-white"><i class="fa fa-save fs-5"></i></button>
                         </label>            
                     </form>   
                     </div>

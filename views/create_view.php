@@ -25,7 +25,7 @@
             ?>
             <!-- Post result  -->
                 <div class="card_post">
-                    <div class="card-body">
+                    <div class="card-body_post">
                         <div class=" d-flex align-items-center ">
                             <img src="user_profile/<?=$user_profile["user_profile"]?>" alt="" width="60" height="60" class=" rounded-circle" >
                             <p  class="ms-2"> <?=$user_profile["user_first_name"].' '.$user_profile["user_last_name"]?> </p>

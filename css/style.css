@@ -49,8 +49,9 @@
 /* Index of container */
 
 /* card body */
-.card-body{
+.card-body_post{
     border: 1px solid ;
+    padding: 2%;
     border-radius: 1%;
     margin-bottom: 15px;
 }
