@@ -25,8 +25,7 @@
         </div>
         <div class="container mt-5">
                 <?php 
-                    require_once "../models/post.php";
-                    // print_r($_GET);
+                    require "../models/post.php";
                     $post_id =$_GET['id'];
                     $post=get_posts_ById($post_id);
                 ?>  
