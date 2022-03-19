@@ -44,4 +44,14 @@ function update_comments($comment_id,$comment_content)
         ':comment_content'=>$comment_content
     ]);
 }
+
+?>
+<!-- To delete comments -->
+<?php
+    function delete_comment($comment_id)
+    {
+       global $database;
+       $statment = $database->prepare("DELETE FROM comments WHERE comment_id = :comment_id");
+       $statment->execute([':comment_id' => $comment_id]);
+    }
 ?>

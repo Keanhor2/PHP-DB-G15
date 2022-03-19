@@ -20,7 +20,7 @@
                     <p class="card-text"><?=$comment['comment_content']?></p>
                     <div class=" d-flex justify-content-end ">
                             <a href="views/edit_comment_view.php?id=<?php echo $comment['comment_id']?>"> <i class="fas fa-pencil-alt fas me-2"></i></a>
-                            <a href=""> <i class="fa fa-trash"></i></a>
+                            <a href="../controllers/delete_comment.php?id=<?php echo $comment['comment_id']?>"> <i class="fa fa-trash"></i></a>
                         </div>
                     <hr class=" line w-75 h-5">
                 </div> 
