@@ -27,7 +27,7 @@ require_once "templates/header.php";
                         <label>
                             <i class="fa fa-camera fs-3 text-primary "></i>
                             <input  type="file" name="profile" style="display:none" >
-                            <button type="submit" class="btn btn-white"><i class="fa fa-save fs-3 ms-4"></i></button>
+                            <button type="submit" class="btn btn-white ms-4"><i class="fa fa-save fs-3 "></i></button>
                         </label>            
                     </form>   
                     </div>
