@@ -7,7 +7,7 @@
                 <input type="text"name="post_content"class="post_content" placeholder="content..."  >
             </div>
             <div>
-                <input  type="file" name="image" >
+                <input class="file_post"  type="file" name="image" >
             </div>
             <div>   
                 <input class="button_post" type="submit"name="submit" value="Post">
@@ -39,27 +39,52 @@
                             <img src="images/<?= $post['post_image']?>" alt="" width="400">
                         </div>
                         <div class="number_like d-flex justify-content-around">
-                            <p>2k like</p>
+                            <p >
+                                    <?php
+                                        require_once "models/like.php";
+                                        $likes =  get_likes();
+                                        $number_like = 0;
+                                        foreach ($likes as $like):
+                                            if($post['post_id'] == $like['post_id']){
+                                                $number_like +=1;
+                                                
+                                    ?>  
+                                            <?php
+                                                }
+                                                endforeach;
+                                            ?>
+                                    <p><?=$number_like?>likes</p>
+                                
+                            </p>
+                            
                             <p>
-                            <?php
-                                require_once "models/comment.php";
-                                $comments =  get_comments();
-                                $number_comment = 0;
-                                foreach ($comments as $comment):
-                                    if($post['post_id'] == $comment['post_id']){
-                                        $number_comment +=1;
-                            ?>
-                            <?php
-                                }
-                                endforeach;
-                            ?>
+                                <?php
+                                    require_once "models/comment.php";
+                                    $comments =  get_comments();
+                                    $number_comment = 0;
+                                    foreach ($comments as $comment):
+                                        if($post['post_id'] == $comment['post_id']){
+                                            $number_comment +=1;
+                                ?>  
+                                        <?php
+                                            }
+                                            endforeach;
+                                        ?>
                                 <p><?=$number_comment?>comments</p>
                             </p>
                         </div>   
-                        <!-- Go to comments -->
-                        <?php 
-                        require "comment_view.php";
-                        ?>  
+                        <!-- place to like and comment the post -->
+                        <div class="like_comment_post d-flex">
+                            <!-- To like the post -->
+                            <a id="click_like" class=" like_post far fa-thumbs-up fs-3"></a>
+                            <p>likess <script>count_like();</script></p>
+                            <!-- To comment the post -->
+                            <div class="comment_post">
+                                <?php 
+                                    require "comment_view.php";
+                                ?>  
+                            </div> 
+                        </div>
                     </div><br>
                 </div><br>
             <?php endforeach; ?>    

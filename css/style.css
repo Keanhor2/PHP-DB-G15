@@ -129,6 +129,7 @@
     width: 100%;
     margin: 1.5% 0%;
 }
+/*  */
 /* button to post  */
 .button_post{
     margin-left: 90%;
@@ -143,11 +144,20 @@
 .comment {
     width: 80%;
 }
-.show_hide_comment{
-    /* background: #0076fcbd; */
-}
+
 .show_hide_comment button{
     /* margin-left: 85%; */
     border-style: none;
 }
+/* Like and comment post  */
 
+ .like_comment_post{
+    width: 100%;
+}
+.like_post{
+    margin-left: 7%;
+}
+.comment_post{
+    width: 80%;
+    margin-left: 5%;
+} 
