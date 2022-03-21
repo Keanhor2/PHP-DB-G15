@@ -13,6 +13,10 @@
                 <input class="button_post" type="submit"name="submit" value="Post">
             </div>
         </form>
+        <div class="show_hide_comment">
+            <button id="hide_comment">hide comment</button>
+            <button id="show_comment">show comment</button>
+        </div>
         <div class="container" mt-3>
             <?php
                 require_once "models/post.php";
@@ -20,8 +24,8 @@
                 foreach ($posts as $post):
             ?>
             <!-- Post result -->
-            <div class="card">
-                <div class="card-body">
+            <div class="card_post">
+                <div class="card-body_post">
                     <div class=" d-flex align-items-center ">
                         <img src="user_profile/<?=$user_profile["user_profile"]?>" alt="" width="60" height="60" class=" rounded-circle" >
                         <p  class="ms-2"> <?=$user_profile["user_first_name"].' '.$user_profile["user_last_name"]?> </p>
@@ -51,14 +55,14 @@
                             ?>
                             <p><?=$number_comment?>comments</p>
                         </p>
-                    </div>       
+                    </div>      
+                    <!-- Go to comments -->
+                    <?php
+                    require "comment_view.php";
+                    ?>
                 </div>
-                <?php endforeach; ?>
-            </div>
-            <!-- Go to comments -->
-            <?php
-            require "comment_view.php";
-            ?>
+            </div><br>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

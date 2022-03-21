@@ -47,6 +47,14 @@
 }
 
 /* Index of container */
+
+/* card body */
+.card-body_post{
+    border: 1px solid ;
+    padding: 2%;
+    border-radius: 1%;
+    margin-bottom: 15px;
+}
 /* Session1 */
 .container_index .section1{
     width: 30%;
@@ -130,5 +138,57 @@
 }
 .button_post:hover{
     background:#0076fcbd;
+}
+/* For the comment of user */
+.comment {
+    width: 80%;
+}
+.show_hide_comment{
+    /* background: #0076fcbd; */
+}
+.show_hide_comment button{
+    /* margin-left: 85%; */
+    border-style: none;
+    
+}
+
+
+/* ========================== */
+.form-group input[type="radio"]{
+    display:none
+}
+.form-group .box{
+    position: relative;
+    background:transparent;
+    border:1px solid royalblue;
+    border-radius:5px;
+    padding: 8px 80px;
+    color: royalblue;
+    cursor: pointer;
+    transition:0.3s all ease;
+
+
+}
+.form-group .box::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height:20px;
+    border-radius:50%;
+    border:2px solid royalblue;
+}
+.form-group .box label{
+    margin-left:90px;
+}
+.form-group input[type="radio"]:checked + .box{
+    background:royalblue;
+    color:white;
+
+}
+.form-group input[type="radio"]:checked + .box::before{
+    border-color: white;
 }
 

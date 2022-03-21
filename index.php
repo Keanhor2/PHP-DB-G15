@@ -6,7 +6,7 @@ require_once "templates/header.php";
     <section class="section2">
         <div class="profile_header">
            <div class="cover_profile">
-               <img class="cover_pro_size" src="images/bg_img1.jpg" alt="">
+               <img class="cover_pro_size" src="../images/bg_img1.jpg" alt="">
                <div class="change_cover"> 
                 <label>
                     <i class="fa fa-image fs-3 text-primary "></i>
@@ -25,9 +25,9 @@ require_once "templates/header.php";
                     <form action="controllers/update_profile.php" method="post" enctype="multipart/form-data">
                         <div class="change_profile">
                         <label>
-                            <i class="fa fa-camera fs-3 text-primary "></i>
-                            <input  type="file" name="profile" style="display:none" >
-                            <button type="submit" class="btn btn-white ms-4"><i class="fa fa-save fs-3 "></i></button>
+                            <i class="fa fa-camera fs-5 text-primary ms-5 "></i>
+                            <input  type="file" name="profile" style="display:none"  >
+                            <button type="submit" class="btn btn-white "><i class="fa fa-save fs-5 "></i></button>
                         </label>            
                     </form>   
                     </div>
