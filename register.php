@@ -37,3 +37,4 @@ require_once "templates/header.php";
     </form>
   </div>
 <?php require_once "templates/footer.php";?>
+<!-- comment -->
