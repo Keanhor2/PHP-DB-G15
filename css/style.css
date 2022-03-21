@@ -155,7 +155,8 @@
 .form_post{
     /* border: 5px solid hotpink ; */
     padding: 1% 2%;
-    border: 1px solid blue;
+    background:rgb(206,206,206);
+
 }
 .post_title{
     text-align:center;
@@ -179,9 +180,14 @@
 .comment {
     width: 80%;
 }
-
+.comment_post{
+    width: 100%;
+}
 .show_hide_comment button{
     /* margin-left: 85%; */
     border-style: none;
     
+}
+.number_like{
+    width: 100%;
 }

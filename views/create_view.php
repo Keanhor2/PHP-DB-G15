@@ -23,48 +23,76 @@
                 $posts = get_posts();
                 foreach ($posts as $post):
             ?>
-            <!-- Post result -->
-            <div class="card_post">
-                <div class="card-body_post">
-                    <div class=" d-flex align-items-center ">
-                        <img src="user_profile/<?=$user_profile["user_profile"]?>" alt="" width="60" height="60" class=" rounded-circle" >
-                        <p  class="ms-2"> 
-                            <?=$user_profile["user_first_name"].' '.$user_profile["user_last_name"]?> 
-                        </p>
-                    </div>
-                    <p class="card-text"><?= $post['post_content'] ?></p> 
-                    <div class=" d-flex justify-content-end ">
-                        <a href="views/edit_view.php?id=<?php echo $post['post_id']?>"><i class="	fas fa-pencil-alt 	fas me-2"></i></a>
-                        <a href="controllers/delete_post.php?id=<?php echo $post['post_id']?>"> <i class="fa fa-trash"></i></a>
-                    </div>
-                    <div class="image_post d-flex justify-content-center">
-                        <img src="images/<?= $post['post_image']?>" alt="" width="400">
-                    </div>
-                    <div class="number_like d-flex justify-content-around">
-                        <p>2k like</p>
-                        <p>
-                        <?php
-                            require_once "models/comment.php";
-                            $comments =  get_comments();
-                            $number_comment = 0;
-                            foreach ($comments as $comment):
-                                if($post['post_id'] == $comment['post_id']){
-                                    $number_comment +=1;
-                            ?>
-                            <?php
-                                }
-                                endforeach;
-                            ?>
-                            <p><?=$number_comment?>comments</p>
-                        </p>
-                    </div>      
-                    <!-- Go to comments -->
-                    <?php
-                    require "comment_view.php";
-                    ?>
-                </div>
-            </div><br>
-            <?php endforeach; ?>
+            <!-- Post result  -->
+                <div class="card_post">
+                    <div class="card-body_post">
+                        <div class=" d-flex align-items-center ">
+                            <img src="user_profile/<?=$user_profile["user_profile"]?>" alt="" width="60" height="60" class=" rounded-circle" >
+                            <p  class="ms-2"> <?=$user_profile["user_first_name"].' '.$user_profile["user_last_name"]?> </p>
+                        </div>
+                        <p class="card-text"><?= $post['post_content'] ?></p> 
+                        <div class=" d-flex justify-content-end ">
+                            <a href="views/edit_view.php?id=<?php echo $post['post_id']?>"><i class="	fas fa-pencil-alt 	fas me-2"></i></a>
+                            <a href="controllers/delete_post.php?id=<?php echo $post['post_id']?>"> <i class="fa fa-trash"></i></a>
+                        </div>
+                        <div class="image_post d-flex justify-content-center">
+                            <img src="images/<?= $post['post_image']?>" alt="" width="400">
+                        </div>
+                        <div class="number_like d-flex justify-content-around">
+                            <p >
+                                    <?php
+                                        require_once "models/like.php";
+                                        $likes =  get_likes();
+                                        $like_number = 0;
+                                        foreach ($likes as $like):
+                                            if($post['post_id'] == $like['post_id']){
+                                                $like_number +=1;
+                                                
+                                    ?>  
+                                            <?php
+                                                }
+                                                endforeach;
+                                            ?>
+                                    <p><?=$like_number?>likes</p>
+                                
+                            </p>
+                            
+                            <p>
+                                <?php
+                                    require_once "models/comment.php";
+                                    $comments =  get_comments();
+                                    $number_comment = 0;
+                                    foreach ($comments as $comment):
+                                        if($post['post_id'] == $comment['post_id']){
+                                            $number_comment +=1;
+                                ?>  
+                                        <?php
+                                            }
+                                            endforeach;
+                                        ?>
+                                <p><?=$number_comment?>comments</p>
+                            </p>
+                        </div>   
+                        <!-- place to like and comment the post -->
+                        <div class="like_comment_post d-flex">
+                            <!-- To like the post -->
+                            <!-- <a id="click_like" class=" like_post far fa-thumbs-up fs-3"></a> -->
+                            <form action="../controllers/like_post.php" method="post">
+                                <input class="form-control" value="<?php echo $post['post_id']?>" type="hidden" name="post_id">
+                                <input class="form-control" value="<?php echo $post['user_id']?>" type="hidden" name="user_id">
+                                <button type="submit" name="submit"class="far fa-thumbs-up fs-3" style="border:none;background:none"></button>
+                            </form>
+                            <!-- <p>likess <script>count_like();</script></p> -->
+                            <!-- To comment the post -->
+                            <div class="comment_post">
+                                <?php 
+                                    require "comment_view.php";
+                                ?>  
+                            </div> 
+                        </div>
+                    </div><br>
+                </div><br>
+            <?php endforeach; ?>    
         </div>
     </div>
 </div>
