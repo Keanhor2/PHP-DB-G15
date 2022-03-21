@@ -32,8 +32,8 @@
                         </div>
                         <p class="card-text"><?= $post['post_content'] ?></p> 
                         <div class=" d-flex justify-content-end ">
-                            <a href="views/edit_view.php?id=<?php echo $post['post_id']?>"><i class="	fas fa-pencil-alt 	fas me-2"></i></a>
-                            <a href="controllers/delete_post.php?id=<?php echo $post['post_id']?>"> <i class="fa fa-trash"></i></a>
+                            <button type="submit" class="btn btn-info me-2"><a href="views/edit_view.php?id=<?php echo $post['post_id']?>"><i class="fas fa-pencil-alt text-white"></i></a> </button>
+                            <button type="submit" class="btn btn-danger"> <a href="controllers/delete_post.php?id=<?php echo $post['post_id']?>"> <i class="fa fa-trash text-white"></i></a> </button>
                         </div>
                         <div class="image_post d-flex justify-content-center">
                             <img src="images/<?= $post['post_image']?>" alt="" width="400">

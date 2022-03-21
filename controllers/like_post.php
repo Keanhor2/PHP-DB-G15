@@ -12,20 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         header('Location:../index.php');
 
       } 
-    // if(!empty($post_id) and $like_number>=1)
-    // {
-    //     header('Location:../index.php');
-    // }
-    // if(!empty($post_id) and $like_number ==0)
-    // {
-    //     $like_number +=1;
-    //     create_like($user_id,$post_id);
-    //     header('Location:../index.php');
-    // }
-    // else
-    // {
-    //     header('Location:../index.php');
-    // }
+    
    
 }
 ?>
