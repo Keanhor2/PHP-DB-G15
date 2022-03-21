@@ -9,7 +9,7 @@
                     $post_id =$_GET['id'];
                     $post=get_posts_ById($post_id);
                 ?>  
-                <form action="../controllers/edit_post.php" method="post" >
+                <form action="../newfeed_controllers/edit_post.php" method="post" >
                     <div class="mb-3">
                         <input type="hidden" class="form-control" value="<?php echo $post['post_id']?>" name="post_id">
                         <input type="text" class="form-control" value="<?=$post['post_content']?>" name="post_content">
