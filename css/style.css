@@ -1,10 +1,10 @@
+/* Navbar of website facebook */
 .navbar{
     background-color:#0074FC;
     margin: 0;
     padding: 0;
     display: flex;
     height: 7vh;
-    
 }
 .navbar_left{
     width: 10%;
@@ -38,7 +38,7 @@
     border: 1px solid white ;
     height: 4vh;
 }
-.navbar_mid .navbar_friend ,.navbar_mid .navbar_notification {
+.navbar_mid .navbar_newfeed,.navbar_mid .navbar_friend ,.navbar_mid .navbar_notification {
     padding-right: 5vh;
 }
 .navbar_right li a{
@@ -55,11 +55,46 @@
     border-radius: 1%;
     margin-bottom: 15px;
 }
-/* Session1 */
+/* <<<<<<<<<<<<<<  Session1  >>>>>>>>>>>>>*/
 .container_index .section1{
     width: 30%;
 }
-/* Session2 */
+.personal_data{
+    border: 1px solid blue;
+}
+.profile_data{
+    display: flex;
+    justify-content: space-between;
+    margin:5% 20%;
+    background:rgba(255, 238, 238, 0.719);
+    height: 20vh;
+}
+.profile_image{
+    width: 45%;
+    margin: auto;
+}
+.profile_name{
+    width: 45%;
+    margin: auto;
+}
+.information_data ul{
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.information_data ul li{
+    margin: 2%;
+}
+.edit_data{
+    margin-left: 95%;
+}
+.photos{
+    border: 1px solid blue;
+}
+.friends{
+    border: 1px solid green;
+}
+/*<<<<<<<<<<<<<<<  Session2  >>>>>>>>>>>>>>*/
 .container_index .section2{
     width: 70%;
     border: 1px solid blue;
@@ -129,6 +164,7 @@
     width: 100%;
     margin: 1.5% 0%;
 }
+/*  */
 /* button to post  */
 .button_post{
     margin-left: 90%;
@@ -143,9 +179,7 @@
 .comment {
     width: 80%;
 }
-.show_hide_comment{
-    /* background: #0076fcbd; */
-}
+
 .show_hide_comment button{
     /* margin-left: 85%; */
     border-style: none;

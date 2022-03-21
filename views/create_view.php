@@ -7,7 +7,7 @@
                 <input type="text"name="post_content"class="post_content" placeholder="content..."  >
             </div>
             <div>
-                <input  type="file" name="image" >
+                <input class="file_post"  type="file" name="image" >
             </div>
             <div>   
                 <input class="button_post" type="submit"name="submit" value="Post">

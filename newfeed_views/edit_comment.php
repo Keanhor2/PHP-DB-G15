@@ -8,7 +8,7 @@
                     $comment_id =$_GET['id'];
                     $comment=get_comment_ById($comment_id);
                 ?>  
-                <form action="../controllers/edit_comment.php" method="post" >
+                <form action="../newfeed_controllers/edit_comment.php" method="post" >
                     <div class="mb-3">
                         <input type="hidden" class="form-control" value="<?php echo $comment['comment_id']?>" name="comment_id">
                         <input type="text" class="form-control" value="<?=$comment['comment_content']?>" name="comment_content">
