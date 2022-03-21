@@ -28,8 +28,6 @@
         <li ><a class="navbar_friend fas fa-user-friends fs-4" href=""></a></li>
         <li><a class="navbar_notification fas fa-bell fs-4" href=""></a></li>
         <li class="search_form">
-            
-            
         </li>
     </ul>
     <ul class="navbar_right">
