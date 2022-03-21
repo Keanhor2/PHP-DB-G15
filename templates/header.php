@@ -28,13 +28,8 @@
         <li ><a class="navbar_friend fas fa-user-friends fs-4" href=""></a></li>
         <li><a class="navbar_notification fas fa-bell fs-4" href=""></a></li>
         <li class="search_form">
-            <!-- <form action="#" class="d-flex">
-                <input class="input_search " type="text"placeholder="search for people places and things..."name="search">
-                <button class=" input_button btn btn-primary fab fa-sistrix"></button>                
-            </form> -->
-            <form action="" id="search-post" class="d-flex">
-                <input type="text" class="input_search" placeholder="Search post..." />
-            </form>
+            
+            
         </li>
     </ul>
     <ul class="navbar_right">

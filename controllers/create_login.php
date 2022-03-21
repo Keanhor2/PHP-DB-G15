@@ -18,8 +18,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     else{
         header('Location: ../login.php');
-        $woring="You are woring something !";
-        $_SESSION["login"]=$woring;
     }
 }
 

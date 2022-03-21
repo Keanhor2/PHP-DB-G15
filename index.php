@@ -31,12 +31,6 @@ require_once "templates/header.php";
                 <a class="fa fa-edit" href=""></a>
             </div>
         </div>
-        <div class="photos">photos
-         
-        </div>
-        <div class="friends">friends
-
-        </div>
     </section>
     <!-- Section2 -->
     <section class="section2">
@@ -64,11 +58,7 @@ require_once "templates/header.php";
                     </div>
                </div>
                <div class="more_info">
-                   <ul>
-                       <li><a href="">About</a></li>
-                       <li><a href="">Friend</a></li>
-                       <li><a href="">Photo</a></li>
-                   </ul>
+                   
                </div>
            </div>
         </div>

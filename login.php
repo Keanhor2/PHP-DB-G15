@@ -15,10 +15,6 @@ require_once "templates/header.php";
     <input type="password" class="form-control" placeholder="Enter password" name="password">
     </div>
     <button type="submit" class=" form-control btn btn-primary mt-4">Log In</button>
-    <?php
-        session_start();
-        echo "<span class='text-danger'>"; echo $woring; "</span>";
-    ?>
     <p> </p>
     <div class="link d-flex justify-content-around">
         <a href="" class="text-center">forget password?</a>
