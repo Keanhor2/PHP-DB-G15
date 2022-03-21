@@ -26,4 +26,12 @@ function get_users()
     $statment->execute();
     return $statment->fetchAll();
 }
+
+function get_user_id()
+{
+    global $database;
+    $statment = $database->prepare("SELECT *FROM users");
+    $statment->execute();
+    return $statment->fetch();
+}
 ?>

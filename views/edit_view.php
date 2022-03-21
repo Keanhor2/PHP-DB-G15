@@ -1,6 +1,5 @@
 <?php 
     require_once "../templates/header.php";
-    
 ?>
 <div class="container_index d-flex">
     <section class="section1">section1</section>

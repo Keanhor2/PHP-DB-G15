@@ -1,11 +1,11 @@
 <?php
-require_once "templates/header.php";
+require_once "../templates/header.php";
 ?>
 
   <h1 class="text-primary text-center mt-2">facebook</h1>
   <div class="form_contianer d-flex justify-content-center mt-3">
-    <form action="controllers/create_register.php" class="w-50 mt-2 border p-4 shadow-sm p-3 mb-5 bg-white rounded " method="post" >
-      <h5 class="text-center text-success">CREATE NEW ACCOUNT</h5>
+    <form action="../controllers/create_register.php" class="w-50 mt-2 border p-4 shadow-sm p-3 mb-5 bg-white rounded " method="post" >
+      <h5 class="text-center text-primary">CREATE NEW ACCOUNT</h5>
       <div class="row"> 
       <div class="col">
         <input type="text" class="form-control"  placeholder="First Name" name="first_name">
@@ -31,10 +31,9 @@ require_once "templates/header.php";
         <option value="F">Female</option>
       </select>
       </div>
-
-      <button type="submit" class=" form-control btn btn-primary mt-4">Rigister</button>
-      <a href="login.php" class="text-center">Alread have an account</a>
+      <button type="submit" class=" form-control btn btn-primary mt-4">Register</button>
+      <a href="../login.php" class="text-center"> <h5>Alread have an account</h5></a>
     </form>
   </div>
-<?php require_once "templates/footer.php";?>
+<?php require_once "../templates/footer.php";?>
 <!-- comment -->

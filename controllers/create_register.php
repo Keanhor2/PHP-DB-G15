@@ -19,7 +19,7 @@
             }
         }
         if($is_has_account){
-            header('Location: ../register.php');
+            header('Location: ../views/register.php');
         }else{
             
             if(!empty($user_first_name) and !empty($user_last_name) and !empty($user_email) and !empty($user_password) and !empty($user_birth) and !empty($user_gender)){
@@ -28,9 +28,8 @@
                 header("Location: ../index.php");
                 }
             }else{
-                header('Location: ../register.php');
+                header('Location: ../views/register.php');
             }
         }
     }
-
 ?>
